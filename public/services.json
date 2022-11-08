@@ -1,0 +1,65 @@
+[
+    {
+        "service_id": "01",
+        "service_name": "Body Treatment",
+        "price": "12000",
+        "details": "Body treatments go back to ancient times starting with milk baths to soften the skin of Cleopatra. Also water therapies using sea water long revered for its high mineral content and therapeutic value in healing and alleviating ailments like arthritis and skin conditions.                                                       Many body treatments used today utilize ingredients derived from the sea including sea salts, marine algae, seaweeds, and plants providing valuable nutrients which are easily utilized by our bodies. Studies conducted have found that the chemical composition of sea water is identical to the chemical makeup of the water found in our own bodies.",
+        "img": "https://i.ibb.co/JHsVFyL/body-treatment.jpg"
+    },
+    {
+        "service_id": "02",
+        "service_name": "Skin Care",
+        "price": "17000",
+        "details": "Skin care is a range of practices that support skin integrity, enhance its appearance, and relieve skin conditions. They can include nutrition, avoidance of excessive sun exposure, and appropriate use of emollients. A good skin care routine will reduce visible pores, wrinkles, and under eye circles. Protection from harmful sun rays will prevent sun damage, blemishes, and hyper-pigmentation. As the individual ages, the skin loses hydration, brightness, and collagen.",
+        "img": "https://i.ibb.co/b1QhLVM/skin-care.jpg"
+    },
+    {
+        "service_id": "03",
+        "service_name": "Hair Cut",
+        "price": "1000",
+        "details": "It is a long established fact that a reader will be distracted by the readable content of a page.",
+        "img": "https://i.ibb.co/HP1CKS2/hair-cut.jpg"
+    },
+    {
+        "service_id": "04",
+        "service_name": "Bridal Make Up",
+        "price": "15000",
+        "details": "Hence, as a bride, HD Makeup can be a great choice as you are under the constant glare of the cameras. Airbrush makeup is mostly suggested for oily skin whereas HD Makeup is suitable for all skin types. Cakey makeup is a big no from the bride's nowadays.",
+        "img": "https://i.ibb.co/850GyJt/bridal-make-up.webp"
+    },
+    {
+        "service_id": "05",
+        "service_name": "Party Make up",
+        "price": "7000",
+        "details": "For the party makeup look you choose to do, your outfit is as important as the makeup you add to it. However, whatever you decide to wear, the products in your makeup kit should include basics like as a concealer, foundation, kohl blush as well as a sexy lip colour.",
+        "img": "https://i.ibb.co/dcydRZW/party-make-up.jpg"
+    },
+    {
+        "service_id": "06",
+        "service_name": "Hair Dressing",
+        "price": "3000",
+        "details": "Hairdressing makes us look confident and speak a lot about our personality. Hairstyles vary as per occasions, for example, a bun looks good in the office, puff looks amazing at weddings and braids look great at parties.",
+        "img": "https://i.ibb.co/DYK9JnG/hair-dressing.jpg"
+    },
+    {
+        "service_id": "07",
+        "service_name": "Manicure & Pedicure ",
+        "price": "6000",
+        "details": "A manicure refers to the curation and care of a client's hands and a pedicure refers to the curation and care of a client's feet. This includes skincare, nail care, and artificial nail enhancements that can be customized to a variety of preferences.",
+        "img": "https://i.ibb.co/y8zx1Cm/me-pedicure.jpg"
+    },
+    {
+        "service_id": "08",
+        "service_name": "Cosmetics",
+        "price": "20000",
+        "details": "It is a long established fact that a reader will be distracted by the readable content of a page.",
+        "img": "https://i.ibb.co/4NZgmZr/cosmetics.jpg"
+    },
+    {
+        "service_id": "09",
+        "service_name": "Messages",
+        "price": "10000",
+        "details": "Make tired, achy skin feel beautiful, soft and healthy with our natural oils for skin. Our beautifying oils combine nut oils with rich scents to enrich your body, face or hair",
+        "img": "https://i.ibb.co/rsRKTGq/massages.jpg"
+    }
+]

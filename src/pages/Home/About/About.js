@@ -7,14 +7,9 @@ const About = () => {
       <div className="hero-content flex-col lg:flex-row">
         <img src={img1} alt="" className=" rounded-lg shadow-2xl" />
         <div className="pl-8">
-          <h1 className="text-7xl font-extrabold dancing pt-2">Not Your Everyday Spa</h1>
+          <h1 className="text-7xl font-extrabold dancing pt-2">About Us</h1>
           <p className="py-6">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+          Beauty Zone Spa in Dhaka. We neglect hands and feet the most in beauty. The skin of the hand becomes black and rough due to daily dust and sun. Manicure should be done regularly to maintain the radiance of the skin of the hands. You can easily do manicure at home. You don’t have to take the time to go to the parlor. You can easily do manicure sitting at home. Let’s not know how to do a manicure at home. reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.
           </p>
           <button className="btn bg-pink-400 w-40">Read More</button>
         </div>
