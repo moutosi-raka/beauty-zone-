@@ -19,8 +19,7 @@ const ServicesPage = () => {
         <div className="text-center mb-8">
           <h1 className="text-5xl text-pink-500 font-bold mb-3 ">Our Services</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-            incidunt placeat pariatur odio cumque.
+            We are try to our best Services. This is our popular services. 
           </p>
         </div>
         <div className="grid mg:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 m-20">
