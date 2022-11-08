@@ -3,3 +3,8 @@
 .dancing{
   font-family: 'Dancing Script', cursive;
 }
+
+.pink-gradient{
+  background: rgb(227,115,206);
+  background: linear-gradient(90deg, rgb(241, 102, 215) 0%, rgb(184, 113, 173) 100%);
+}
