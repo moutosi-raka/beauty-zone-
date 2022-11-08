@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Header from "../Shared/Header/Header";
+import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 
 const Login = () => {
 
@@ -10,7 +11,7 @@ const Login = () => {
     return (
         <div>
         <Header></Header>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl text-white mx-auto my-20 pink-gradient shadow-lg">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl text-white mx-auto my-20 pink-gradient shadow-2xl">
         <h1 className="text-2xl font-bold text-center ">Login</h1>
         <form onSubmit={handleLogin} className="space-y-6 ng-untouched ng-pristine ng-valid">
           <div className="space-y-1 text-sm">
@@ -50,13 +51,13 @@ const Login = () => {
           <div className="flex-1 h-px sm:w-16 bg-base-100"></div>
         </div>
         <div className="flex justify-center space-x-4">
-          
+        <GoogleSignIn></GoogleSignIn>
         </div>
         <p className="text-sm text-center sm:px-6 ">
           Don't have an account?
           <Link
             rel="noopener noreferrer"
-            to="/signup"
+            to="/register"
             className="underline text-pink-900 font-bold ml-2"
           >
             Sign up
