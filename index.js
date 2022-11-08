@@ -29,6 +29,13 @@ app.get('/services', async(req, res)=>{
     res.send(services);
 })
 
+app.get('/all-services', async(req,res)=>{
+    const query = {};
+    const cursor = servicesCollection.find(query);
+    const services = await cursor.toArray();
+    res.send(services);
+})
+
 }
 run().catch(error => console.log(error));
 
