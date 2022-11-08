@@ -1,0 +1,10 @@
+.pink-gradient {
+    background: rgb(227,115,206);
+background: linear-gradient(90deg, rgba(227,115,206,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.header-position{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
