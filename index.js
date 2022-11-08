@@ -17,11 +17,20 @@ console.log(process.env.DB_USER, process.env.DB_PASSWORD);
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.dtu3pyw.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+
+
+async function run(){
+const  servicesCollection = client.db('beautyParlour').collection('parlourServices');
+
+app.get('/services', async(req, res)=>{
+    const query = {};
+    const cursor = servicesCollection.find(query).limit(3);
+    const services =  await cursor.toArray();
+    res.send(services);
+})
+
+}
+run().catch(error => console.log(error));
 
 
 app.get('/', (req, res)=>{
