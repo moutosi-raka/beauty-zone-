@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
 import Header from "../Shared/Header/Header";
-import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 
 const Login = () => {
 
-    const handleLogin = event =>{
+    const {signIn} = useContext(AuthContext);
 
+    const handleLogin = event =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        signIn(email,password)
+    .then(result =>{
+      const user = result.user;
+      console.log(user);
+      // toast.success('Congratulations!!!!')
+      form.reset()
+      // navigate(from, {replace: true});
+    })
+    .catch(e => {
+      console.error('error', e)
+      // setError(e.message);
+    })
     }
+
+
     return (
         <div>
         <Header></Header>

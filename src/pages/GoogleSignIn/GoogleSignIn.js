@@ -14,6 +14,8 @@ const GoogleSignIn = () => {
         })
         .catch(e => console.error('error :', e))
     }
+
+    
     return (
         <div>
         <button onClick={handleGoogleSignIn} aria-label="Log in with Google" className="p-3 rounded-sm">
