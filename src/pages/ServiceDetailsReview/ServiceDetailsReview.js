@@ -8,15 +8,14 @@ const ServiceDetailsReview = () => {
     const service = useLoaderData();
 
     return (
-      <div className='bg-pink-100 '>
+      <div className='bg-pink-100 py-8'>
        <ServiceDetails 
-       key={service._id}
        service= {service}
        >
        </ServiceDetails>
 
        <hr className='border-2 w-3/4 mx-auto my-8 border-white' />
-       <ServiceReview></ServiceReview>
+       <ServiceReview service= {service}></ServiceReview>
       </div>
     );
 };
