@@ -18,7 +18,7 @@ const ServicesCartDetails = ({service}) => {
         </div>
         <p className="dark:text-gray-100 mb-4">{details.slice(0,100) + "..."}</p>
         <div>
-          <Link to={`/checkout/${_id}`}><button className="btn btn-outline btn-secondary w-1/2">See Details</button></Link>
+          <Link to={`/service/${_id}`}><button className="btn btn-outline btn-secondary w-1/2">See Details</button></Link>
         </div>
       </div>
     );

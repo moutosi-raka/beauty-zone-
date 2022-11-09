@@ -1,0 +1,4 @@
+.dark-pink-gradient {
+    background: rgb(227,115,206);
+background: linear-gradient(90deg, rgb(234, 51, 201) 0%, rgb(210, 131, 212) 100%);
+}
