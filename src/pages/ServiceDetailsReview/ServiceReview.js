@@ -7,9 +7,8 @@ const ServiceReview = ({service}) => {
   const { user } = useContext(AuthContext);
   const {_id, service_name} = service;
   const [reviews, setReviews] = useState([]);
-
   useEffect( ()=>{
-    fetch("http://localhost:5000/reviews")
+    fetch(`http://localhost:5000/reviews/${_id}`)
     .then(res => res.json())
     .then(data => {
       setReviews(data)
@@ -72,10 +71,14 @@ const ServiceReview = ({service}) => {
               <input type="submit" className="btn w-40 bg-pink-500 border-0 my-4" value="Add Review" />
             </form>
            {
-            reviews.map(review => <ReviewCart
+            reviews.length>0 ?
+             reviews.map(review => <ReviewCart
             key={review._id}
             review={review}
+            id={_id}
             ></ReviewCart>)
+            :
+            <h1 className="text-7xl">No Review</h1>
            }
           </div>
         </>
