@@ -30,7 +30,7 @@ const Services = () => {
         ))}
       </div>
       <div className="text-center mt-8">
-        <Link to='/services'><button className="btn btn-outline btn-secondary">See All Services</button></Link>
+        <Link to='/services'><button className="btn btn-outline btn-secondary mt-8">See All Services</button></Link>
       </div>
     </div>
     );

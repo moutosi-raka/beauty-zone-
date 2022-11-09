@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo/logo-4.png";
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import './Header.css'
 
 const Header = () => {
+  const {user, logOut} = useContext(AuthContext);
 
+  const handleLogout = ()=>
+  {
+    logOut()
+    .then(()=>{})
+    .catch(e => console.error(e));
+  }
     const menuItems = (
         <>
           <li>
-            <Link to="/">Home</Link>
-            {/* <Link to='/about'>About us</Link>
-            <Link to='/services'>Services</Link>
-             */}
+            <Link  to="/">Home</Link>
           </li>
+          <li>
+            <Link to='/services'>Services</Link> 
+          </li>
+          {
+            user?.uid ?
+            <>
+            <li><Link to='/my-review'>My Review</Link></li>
+            <li><Link to='/add-services'>Add Service</Link></li>
+            </>
+            : <></>
+          }
         </>
     );
     return (
@@ -40,6 +56,7 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               {menuItems}
+              
             </ul>
           </div>
           <Link to="/">
@@ -50,13 +67,13 @@ const Header = () => {
           <ul className="menu menu-horizontal p-0">{menuItems}</ul>
         </div>
         <div className="navbar-end">
-          {/* {
+          {
             user?.uid 
             ? <button onClick={handleLogout} className="btn btn-outline btn-secondary">Log Out</button>
             : 
             <Link  to='/login'><button className="btn btn-outline btn-secondary">Login</button></Link>
           }
-           */}
+          
         </div>
       </div>
     );

@@ -1,31 +1,49 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
-import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
 import Header from "../Shared/Header/Header";
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
-    const handleSignUp = event =>{
-        event.preventDefault();
-        const form = event.target;
-        // const name = form.name.value;
-        const email = form.email.value;
-        const password = form.password.value;
-        createUser(email, password)
-        .then( result => {
-          const user = result.user;
-          console.log(user);
-        })
-        .catch(error => console.error('error', error))
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const photoURL = form.photoURL.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name);
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
         form.reset();
-    }
-    return (
-        <div>
-        <Header></Header>
+        handleUpdateUserProfile(name, photoURL);
+      })
+      .catch((error) => console.error("error", error));
+   
+  };
+
+  const handleUpdateUserProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL,
+    };
+    updateUserProfile(profile)
+      .then((res) => console.log('update'))
+      .catch((error) => console.log(error));
+  };
+
+  return (
+    <div>
+      <Header></Header>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl text-white mx-auto my-20 pink-gradient shadow-2xl">
         <h1 className="text-2xl font-bold text-center ">Sign Up</h1>
-        <form onSubmit={handleSignUp} className="space-y-6 ng-untouched ng-pristine ng-valid">
+        <form
+          onSubmit={handleSignUp}
+          className="space-y-6 ng-untouched ng-pristine ng-valid"
+        >
           <div className="space-y-1 text-sm">
             <label htmlFor="username" className="block ">
               Your Name
@@ -58,6 +76,7 @@ const Register = () => {
               id="email"
               placeholder="Email"
               className="w-full text-black px-4 py-3 rounded-md"
+              required
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -70,9 +89,9 @@ const Register = () => {
               id="password"
               placeholder="Password"
               className="w-full px-4 py-3 rounded-md border-gray-700 text-black focus:border-violet-400"
+              required
             />
-            <div className="flex justify-end text-xs text-white">
-            </div>
+            <div className="flex justify-end text-xs text-white"></div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm  bg-pink-500">
             Sing Up
@@ -80,13 +99,11 @@ const Register = () => {
         </form>
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 bg-base-100"></div>
-          <p className="px-3 text-sm ">
-            Login with social accounts
-          </p>
+          <p className="px-3 text-sm ">Login with social accounts</p>
           <div className="flex-1 h-px sm:w-16 bg-base-100"></div>
         </div>
         <div className="flex justify-center space-x-4">
-         <GoogleSignIn></GoogleSignIn>
+          <GoogleSignIn></GoogleSignIn>
         </div>
         <p className="text-sm text-center sm:px-6 ">
           Already have a account?
@@ -100,7 +117,7 @@ const Register = () => {
         </p>
       </div>
     </div>
-    );
+  );
 };
 
 export default Register;

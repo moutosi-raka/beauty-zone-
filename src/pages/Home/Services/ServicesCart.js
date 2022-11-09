@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaArrowRight } from "react-icons/fa";
 
 const ServicesCart = ({service}) => {
-    const {  service_name, price, details, img } = service;
+    const { _id, service_name, price, details, img } = service;
     return (
         <div className='px-8'>
         <div className='text-center px-4 ml-4'>
@@ -11,6 +13,7 @@ const ServicesCart = ({service}) => {
         <h2 className="text-4xl font-bold dancing">{service_name}</h2>
         <p>{details.slice(0,100) + "..."}</p>
         <p className='font-bold'>Price : {price}</p>
+        <Link to={`/service/${_id}`}><button className="btn btn-link text-pink-400  w-1/2 border-0 hover:text-pink-700 py-1">See Details<FaArrowRight className='ml-3'></FaArrowRight></button></Link>
         </div>
     </div>
     );
