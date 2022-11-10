@@ -25,14 +25,14 @@ const reviewsCollection = client.db('beautyParlour').collection('reviews');
 
 app.get('/services', async(req, res)=>{
     const query = {};
-    const cursor = servicesCollection.find(query).limit(3);
+    const cursor = servicesCollection.find(query).limit(3).sort({"date" :1})
     const services =  await cursor.toArray();
     res.send(services);
 })
 
 app.get('/all-services', async(req,res)=>{
     const query = {};
-    const cursor = servicesCollection.find(query);
+    const cursor = servicesCollection.find(query).sort({"date" :1});
     const services = await cursor.toArray();
     res.send(services);
 })
@@ -43,6 +43,15 @@ app.get('/service/:id', async(req, res)=>{
     const service = await servicesCollection.findOne(query);
     res.send(service);
 })
+
+app.post('/services', async(req, res)=>{
+    const service = req.body;
+    const result = await servicesCollection.insertOne(service);
+    res.send(result);
+ })
+
+
+
 
 // review api
 app.post('/reviews', async(req, res)=>{
@@ -69,6 +78,13 @@ app.get('/reviews/:serviceId', async(req, res)=>{
     const cursor =  reviewsCollection.find(query);
     const reviews = await cursor.toArray();
     res.send(reviews);
+})
+
+app.delete('/reviews/:id', async(req,res)=>{
+    const id = req.params.id;
+    const query = {_id: ObjectId(id)};
+    const result = await reviewsCollection.deleteOne(query);
+    res.send(result)
 })
 
 }
