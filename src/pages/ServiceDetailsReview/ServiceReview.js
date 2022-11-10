@@ -13,7 +13,7 @@ const ServiceReview = ({service}) => {
     .then(data => {
       setReviews(data)
     });
-  },[])
+  },[_id])
   
   const handleReview = event =>{
     event.preventDefault();

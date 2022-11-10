@@ -5,7 +5,6 @@ const MyReviewCart = ({review,handleDelete}) => {
     const {_id, message, serviceName} = review;
 
    
-
     return (
         <div >
         
