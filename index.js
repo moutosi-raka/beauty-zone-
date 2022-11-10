@@ -21,7 +21,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 async function run(){
 const  servicesCollection = client.db('beautyParlour').collection('parlourServices');
-const reviewsCollection = client.db('beautyParlour').collection('orders'); 
+const reviewsCollection = client.db('beautyParlour').collection('reviews'); 
 
 app.get('/services', async(req, res)=>{
     const query = {};
@@ -49,6 +49,26 @@ app.post('/reviews', async(req, res)=>{
    const review = req.body;
    const result = await reviewsCollection.insertOne(review);
    res.send(result);
+})
+
+app.get('/reviews', async(req,res)=>{
+    let query = {};
+    if(req.query.email){
+        query = {
+            email: req.query.email
+        }
+    }
+    const cursor = reviewsCollection.find(query).sort({"date" : -1});
+    const reviews = await cursor.toArray();
+    res.send(reviews); 
+})
+
+app.get('/reviews/:serviceId', async(req, res)=>{
+    const id = req.params.serviceId;
+    const query = {serviceId: id};
+    const cursor =  reviewsCollection.find(query);
+    const reviews = await cursor.toArray();
+    res.send(reviews);
 })
 
 }
