@@ -6,8 +6,8 @@ const PrivateRoute = ({children}) => {
     const {user,loading} = useContext(AuthContext);
     const location = useLocation();
     if(loading){
-        return <div className='h-60'>
-            <h1 className='text-5xl mt-5 ml-20'>Loading........</h1>
+        return <div className='ml-36 mt-32 mb-32'>
+            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
         </div>
     }
     if(user && user.uid){
