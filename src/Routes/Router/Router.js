@@ -22,13 +22,13 @@ export const router = createBrowserRouter([
         },
         {
             path: '/services',
-            loader : ()=> fetch("http://localhost:5000/all-services"),
+            loader : ()=> fetch("https://beauty-parlour-server-moutosi-raka.vercel.app/all-services"),
             element: <ServicesPage></ServicesPage>
         },
         {
             path: '/service/:id',
             element: <ServiceDetailsReview></ServiceDetailsReview>,
-            loader: ({params})=> fetch(`http://localhost:5000/service/${params.id}`)
+            loader: ({params})=> fetch(`https://beauty-parlour-server-moutosi-raka.vercel.app/service/${params.id}`)
         },
         {
             path: '/my-review',

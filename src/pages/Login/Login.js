@@ -31,7 +31,7 @@ const Login = () => {
       }
 
       //get jwt token
-       fetch('http://localhost:5000/jwt',
+       fetch('https://beauty-parlour-server-moutosi-raka.vercel.app/jwt',
        {
         method: 'POST',
         headers: {

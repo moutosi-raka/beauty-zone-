@@ -22,7 +22,7 @@ const AddService = () => {
         date
     }
 
-    fetch('http://localhost:5000/services', {
+    fetch('https://beauty-parlour-server-moutosi-raka.vercel.app/services', {
         method: 'POST',
         headers: {
             'content-type' : 'application/json'

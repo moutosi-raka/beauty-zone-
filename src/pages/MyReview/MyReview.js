@@ -10,7 +10,7 @@ const MyReview = () => {
   useTitle("My Review");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user.email}`, {
+    fetch(`https://beauty-parlour-server-moutosi-raka.vercel.app/reviews?email=${user.email}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -25,7 +25,7 @@ const MyReview = () => {
       "Are you sure, You want to cancel this review"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${id}`, {
+      fetch(`https://beauty-parlour-server-moutosi-raka.vercel.app/reviews/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
