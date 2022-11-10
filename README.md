@@ -4,7 +4,7 @@
 ***
 Beauty is a ladies salon.
 
-# Project Live Side Link : ()
+# Project Live Side Link : (https://beauty-parlour-cd243.web.app/)
 
 
 ## Technologies
