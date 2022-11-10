@@ -45,6 +45,8 @@ const ServiceReview = ({service}) => {
     .then(res => res.json())
     .then(data => {
         console.log(data);
+        const newReview = [...reviews, data];
+        setReviews(newReview)
         if(data.acknowledged){
             alert('review added');
             event.target.reset();

@@ -1,3 +1,41 @@
+
+# Project Name :Beauty Zone
+
+***
+Beauty is a ladies salon.
+
+# Project Live Side Link : ()
+
+
+## Technologies
+
+* react: ^18.2.0
+* react-dom: ^18.2.0"
+* react-icons: ^4.6.0
+* react-iframe: ^1.8.5
+* react-router-dom: ^6.4.2
+* tailwindcss: ^3.2.1
+* postcss: ^8.4.18
+* firebase: ^9.12.1
+* daisyui: ^2.31.0
+* express js
+* mongodb 
+
+
+# Feature 
+
+* Firebase authentication system 
+* Private router
+* client added review
+* Responsive Website
+* photo view
+* toggle navbar
+* API
+* use express js for backend API loading
+* Not Found Page
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
