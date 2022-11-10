@@ -1,6 +1,7 @@
 import React from "react";
 import img1 from "../../../assets/about us/img4.jpg";
 
+
 const About = () => {
   return (
     <div className="hero px-20">

@@ -14,11 +14,6 @@ const ServicesCartDetails = ({ service }) => {
         style={{ objectFit: "cover" }} alt="" />
       </PhotoView>
     </PhotoProvider>
-      {/* <img
-        src={img}
-        
-        alt=""
-      /> */}
 
       <div className="mt-6 mb-2">
         <span className="block text-xs font-medium tracking-widest uppercase text-pink-500">

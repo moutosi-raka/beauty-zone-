@@ -28,7 +28,7 @@ const ServicesPage = () => {
         <div className="grid mg:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 m-20">
             {
               services.map(service => <ServicesCartDetails
-              key={service.service_id}
+              key={service._id}
               service={service}
               ></ServicesCartDetails>)
             }
