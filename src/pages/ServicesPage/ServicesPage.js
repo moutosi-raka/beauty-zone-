@@ -3,9 +3,12 @@ import { Link, useLoaderData } from "react-router-dom";
 import "./ServicesPage.css";
 import { FaGreaterThan } from "react-icons/fa";
 import ServicesCartDetails from "./ServicesCartDetails";
+import useTitle from "../../Hooks/useTitle";
 
 const ServicesPage = () => {
     const services = useLoaderData();
+
+    useTitle('Services');
     return (
         <div>
         <div className="text-center services-banner pt-20  text-white  mb-20">

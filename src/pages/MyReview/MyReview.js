@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import MyReviewCart from './MyReviewCart';
 import userPic from '../../assets/user profile/user.jpg'
+import useTitle from '../../Hooks/useTitle';
 
 const MyReview = () => {
     const {user} = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
-
+   useTitle('My Review')
    
 
     useEffect( ()=>{

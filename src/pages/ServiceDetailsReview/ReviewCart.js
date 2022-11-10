@@ -2,7 +2,7 @@ import React from "react";
 import userPic from '../../assets/user profile/userProfile.png'
 
 const ReviewCart = ({ review }) => {
-  const { serviceId, img, message, clientName } = review;
+  const { img, message, clientName } = review;
  
   return (
     <div>

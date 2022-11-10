@@ -4,9 +4,11 @@ import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
 import Header from "../Shared/Header/Header";
 import toast from 'react-hot-toast';
+import useTitle from "../../Hooks/useTitle";
 
 const Login = () => {
-
+    
+    useTitle('Login');
     const {signIn} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
