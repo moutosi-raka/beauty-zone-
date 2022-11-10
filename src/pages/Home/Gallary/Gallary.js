@@ -8,7 +8,6 @@ import img6 from '../../../assets/services/massages.jpg'
 import img7 from '../../../assets/services/me&pedicure.jpg'
 import img8 from '../../../assets/services/party-make-up.jpg'
 import img9 from '../../../assets/about us/img4.jpg'
-import { PhotoProvider, PhotoView } from "react-photo-view";
 import 'react-photo-view/dist/react-photo-view.css';
 
 const Gallary = () => {

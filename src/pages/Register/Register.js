@@ -53,6 +53,7 @@ const Register = () => {
               name="name"
               placeholder="Your Name"
               className="w-full text-black px-4 py-3 rounded-md"
+              required
             />
           </div>
           <div className="space-y-1 text-sm">

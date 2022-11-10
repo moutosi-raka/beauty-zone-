@@ -77,7 +77,6 @@ const ServiceReview = ({service}) => {
              reviews.map(review => <ReviewCart
             key={review._id}
             review={review}
-            id={_id}
             ></ReviewCart>)
             :
             <h1 className="text-7xl">No Review</h1>
