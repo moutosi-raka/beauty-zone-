@@ -44,38 +44,38 @@ const AddService = () => {
         <div>
             <div>
       <div className="text-center mt-8 font-bold">
-        <h2 className="text-8xl dancing text-pink-500">ADD  SERVICE</h2>
+        <h2 className="text-2xl md:text-5xl dancing text-pink-500">ADD  SERVICE</h2>
         
       </div>
-      <div className="m-16 bg-gray-100 p-20 rounded text-center">
+      <div className="m-5 md:m-16 bg-gray-100 p-5 md:p-20 rounded text-center">
         <form onSubmit={handleAddService}>
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <input
               type="text"
               name="service_name"
               placeholder="Enter Service Name"
-              className="input input-bordered w-3/4 mb-8"
+              className="input input-bordered w-full md:w-3/4 mb-8"
               required
             />
             <input
               type="text"
               placeholder="Price"
               name="price"
-              className="input input-bordered w-3/4 mb-8 "
+              className="input input-bordered w-full md:w-3/4 mb-8 "
               required
             />
             <input
               type="text"
               name = "details"
               placeholder= "Details"
-              className="input input-bordered w-3/4 mb-8"
+              className="input input-bordered w-full md:w-3/4 mb-8"
               required
             />
             <input
               type="text"
               placeholder="Image URL"
               name= "img"
-              className="input input-bordered w-3/4 mb-8  "
+              className="input input-bordered w-full md:w-3/4 mb-8  "
               required
             />
           </div>
