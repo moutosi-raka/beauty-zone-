@@ -16,7 +16,7 @@ const ServiceReview = ({service}) => {
   },[_id])
   
   const handleReview = event =>{
-    event.preventDefault();
+    // event.preventDefault();
     const date = new Date();
     const userId = user?.uid;
     const email = user?.email;

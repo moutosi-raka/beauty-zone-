@@ -9,12 +9,12 @@ const MyReviewCart = ({ review, handleDelete}) => {
     <div>
       <div className="bg-base-300 p-3 mx-auto my-4 w-[95%] md:w-1/2 rounded flex items-center">
         <div>
-          <button
+          {/* <button
             onClick={() => handleDelete(_id)}
             className="px-3 mr-2 rounded-lg text-white py-1 bg-pink-500"
           >
              X
-          </button>
+          </button> */}
         </div>
         <div></div>
         <div className="flex items-center justify-between w-full ml-4">
@@ -23,12 +23,18 @@ const MyReviewCart = ({ review, handleDelete}) => {
             <p>{message}</p>
           </div>
           <div>
-            <label
+            {/* <label
               htmlFor="my-modal-3"
               className="px-5 btn rounded-lg text-white py-1 bg-pink-500"
             >
               Edit
-            </label>
+            </label> */}
+             <button
+            onClick={() => handleDelete(_id)}
+            className="px-3 mr-2 rounded-lg text-white py-1 bg-pink-500"
+          >
+             X
+          </button>
           </div>
           <input type="checkbox" id="my-modal-3" className="modal-toggle" />
           <div className="modal">
