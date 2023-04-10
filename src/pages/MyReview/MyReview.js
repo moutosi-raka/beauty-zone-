@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import MyReviewCart from "./MyReviewCart";
-import userPic from "../../assets/user profile/user.jpg";
+import userPic from "../../assets/review.jpg";
 import useTitle from "../../Hooks/useTitle";
 
 const MyReview = () => {
@@ -43,29 +43,33 @@ const MyReview = () => {
 
  
   return (
-    <div className="ml-36">
-      <div className="p-5 mx-auto sm:p-10 md:p-16 text-gray-100">
-        <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-          {user.photoURL ? (
+    <div className="">
+      <div className="text-gray-100">
+        <div className="flex flex-col max-w-2xl mx-auto overflow-hidden rounded">
+          {/* {user.photoURL ? (
             <img
               src={user.photoURL}
               alt=""
-              className="w-full h-12 sm:h-96 border-8 border-white object-cover"
+              className="w-[50%] border-8 border-white object-cover"
             />
           ) : (
             <img
               src={userPic}
               alt=""
-              className="w-full h-12 sm:h-96 border-8 border-white object-cover"
+              className="w-full border-8 border-white object-cover"
             />
-          )}
+          )} */}
+          <img
+              src={userPic}
+              alt=""
+              className="w-full border-8 h-60 border-white object-cover"
+            />
 
-          <div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark-pink-gradient ">
-            <div className="space-y-1">
-              <h1 className="inline-block text-2xl font-semibold sm:text-8xl dancing">
+          <div className="p-6 text-center m-4 -mt-16 space-y-6 md:w-1/2 mx-auto rounded-md dark-pink-gradient ">
+              <h1 className="inline-block text-2xl  font-semibold md:text-4xl dancing">
                 {user.displayName}
               </h1>
-            </div>
+            
           </div>
         </div>
       </div>

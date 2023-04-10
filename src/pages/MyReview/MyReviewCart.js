@@ -7,7 +7,7 @@ const MyReviewCart = ({ review, handleDelete}) => {
 
   return (
     <div>
-      <div className="bg-base-300 p-3 mx-auto my-4 w-1/2 rounded flex items-center">
+      <div className="bg-base-300 p-3 mx-auto my-4 w-[95%] md:w-1/2 rounded flex items-center">
         <div>
           <button
             onClick={() => handleDelete(_id)}
