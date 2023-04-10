@@ -56,16 +56,16 @@ const ServiceReview = ({service}) => {
   }
 
   return (
-    <div className="ml-36">
-      <h1 className=" dancing text-5xl">Client Review</h1>
+    <div className="ml-12 md:ml-36">
+      <h1 className=" dancing text-2xl md:text-5xl">Client Review</h1>
 
       {user?.uid ? (
         <>
-          <div className="mt-10">
+          <div className="md:mt-10">
             <form onSubmit={handleReview} className="form-control">
               <label className="label"></label>
               <textarea
-                className="textarea textarea-bordered h-12 w-1/2  "
+                className="textarea textarea-bordered h-12 w-[90%] md:w-1/2  "
                 placeholder="Write your review"
                 name="review"
               ></textarea>
@@ -79,7 +79,7 @@ const ServiceReview = ({service}) => {
             review={review}
             ></ReviewCart>)
             :
-            <h1 className="text-7xl">No Review</h1>
+            <h1 className="text-2xl md:text-7xl">No Review</h1>
            }
           </div>
         </>

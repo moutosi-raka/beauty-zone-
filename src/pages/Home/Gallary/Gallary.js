@@ -12,9 +12,9 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 const Gallary = () => {
     return (
-        <div className='my-16 mx-20'>
+        <div className='my-8 mx-5 md:my-16 md:mx-20'>
             <div className='text-center'>
-            <h1 className="text-8xl font-bold dancing">Our Gallery</h1>
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold dancing">Our Gallery</h1>
              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem incidunt placeat pariatur odio cumque.</p>
             </div>
             <section className="py-6 dark:bg-gray-800 dark:text-gray-50">

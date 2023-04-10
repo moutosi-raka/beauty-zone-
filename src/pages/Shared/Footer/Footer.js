@@ -5,10 +5,10 @@ import { FaMobileAlt , FaMapMarkerAlt} from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="footer px-16 py-10 pink-gradient text-base-content text-base">
+        <footer className="footer px-5 md:px-16 py-10 pink-gradient text-base-content text-base">
       <div>
         <Link to="/">
-          <img className="w-48" src={logo} alt="" />
+          <img className="w-32 md:w-48" src={logo} alt="" />
         </Link>
         <p>
           ACME Industries Ltd.

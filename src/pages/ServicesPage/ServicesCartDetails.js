@@ -6,7 +6,8 @@ import 'react-photo-view/dist/react-photo-view.css';
 const ServicesCartDetails = ({ service }) => {
   const { _id, service_name, price, details, img } = service;
   return (
-    <div className="max-w-xs p-6 rounded-md shadow-md service-cart">
+    <div className="flex justify-center">
+               <div className="max-w-xs p-2 md:p-6 rounded-md shadow-md service-cart ">
       <PhotoProvider>
       <PhotoView src={img}>
         <img src={img}
@@ -30,6 +31,8 @@ const ServicesCartDetails = ({ service }) => {
         </Link>
       </div>
     </div>
+    </div>
+   
   );
 };
 

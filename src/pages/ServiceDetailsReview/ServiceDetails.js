@@ -17,7 +17,7 @@ const ServiceDetails = ({service}) => {
                 </div>
             </div>
         </div>
-        <div className='w-1/2 my-5 mx-auto text-black'>
+        <div className='w-[80%] md:w-1/2 my-5 mx-auto text-black'>
           <p>{details}</p>
         </div>
         <div className='text-right'>

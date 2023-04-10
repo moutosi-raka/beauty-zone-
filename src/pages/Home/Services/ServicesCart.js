@@ -5,9 +5,9 @@ import { FaArrowRight } from "react-icons/fa";
 const ServicesCart = ({service}) => {
     const { _id, service_name, price, details, img } = service;
     return (
-        <div className='px-8'>
-        <div className='text-center px-4 ml-4'>
-           <img className='rounded-full w-64 h-64 border-8 border-white' src={img} alt="" />
+        <div className='px-3 md:px-8'>
+        <div className='text-center px-4 ml-4 flex justify-center'>
+           <img className='rounded-full w-32 h-32  md:w-40 md:h-40 lg:w-60 lg:h-60  border-8 border-white' src={img} alt="" />
         </div>
         <div className='text-center'>
         <h2 className="text-4xl font-bold dancing">{service_name}</h2>

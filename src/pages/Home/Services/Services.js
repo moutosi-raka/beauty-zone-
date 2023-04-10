@@ -13,16 +13,16 @@ const Services = () => {
     }, []);
    
     return (
-        <div className="my-16 p-20  bg-pink-50">
+        <div className="md:my-16 p-5 md:p-20  bg-pink-50">
       <div className="text-center mb-8">
-        <h1 className="text-8xl font-bold dancing">Our Services</h1>
+        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold dancing">Our Services</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
           incidunt placeat pariatur odio cumque.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 ">
         {services.map((service) => (
           <ServicesCart
             key={service.service_id}

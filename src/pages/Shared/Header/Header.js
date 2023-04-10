@@ -21,9 +21,6 @@ const Header = () => {
           <li>
             <Link to='/services'>Services</Link> 
           </li>
-          <li>
-            <Link to='/blog'>Blog</Link> 
-          </li>
           {
             user?.uid ?
             <>
@@ -35,7 +32,7 @@ const Header = () => {
         </>
     );
     return (
-        <div className="navbar pink-gradient px-16 py-3 header-position">
+        <div className="navbar pink-gradient px-5 md:px-16 py-3 header-position">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -74,7 +71,7 @@ const Header = () => {
             user?.uid 
             ? <button onClick={handleLogout} className="btn btn-outline btn-secondary">Log Out</button>
             : 
-            <Link  to='/login'><button className="btn btn-outline btn-secondary">Login</button></Link>
+            <Link  to='/login'><button className="btn btn-xs md:btn-sm btn-outline btn-secondary">Login</button></Link>
           }
           
         </div>
