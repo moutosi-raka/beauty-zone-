@@ -25,7 +25,7 @@ const Services = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 ">
         {services.map((service) => (
           <ServicesCart
-            key={service.service_id}
+            key={service._id}
             service={service}
           ></ServicesCart>
         ))}
