@@ -43,7 +43,7 @@ const reviewsCollection = client.db('beautyParlour').collection('reviews');
 app.post('/jwt', (req, res)=>{
     const user = req.body;
     console.log("User",user);
-    const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '1h'})
+    const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '12h'})
     res.send({token});
 })
 
@@ -125,7 +125,7 @@ run().catch(error => console.log(error));
 
 
 app.get('/', (req, res)=>{
-    res.send('beauty car server is running');
+    res.send('beauty parlous server is running');
 })
 
 
