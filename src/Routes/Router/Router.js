@@ -8,12 +8,14 @@ import Register from "../../pages/Register/Register";
 import ServiceDetailsReview from "../../pages/ServiceDetailsReview/ServiceDetailsReview";
 import ServicesPage from "../../pages/ServicesPage/ServicesPage";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import DisplayError from "../../pages/Shared/DisplayError/DisplayError";
 
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <DisplayError></DisplayError>,
         children: [
         {
             path:'/',
@@ -21,13 +23,13 @@ export const router = createBrowserRouter([
         },
         {
             path: '/services',
-            loader : ()=> fetch("https://beauty-parlour-server-moutosi-raka.vercel.app/all-services"),
+            loader : ()=> fetch("http://localhost:5000/all-services"),
             element: <ServicesPage></ServicesPage>
         },
         {
             path: '/service/:id',
             element: <ServiceDetailsReview></ServiceDetailsReview>,
-            loader: ({params})=> fetch(`https://beauty-parlour-server-moutosi-raka.vercel.app/service/${params.id}`)
+            loader: ({params})=> fetch(`http://localhost:5000/service/${params.id}`)
         },
         {
             path: '/my-review',

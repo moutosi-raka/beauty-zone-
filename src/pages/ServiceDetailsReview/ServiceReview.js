@@ -8,7 +8,7 @@ const ServiceReview = ({service}) => {
   const {_id, service_name} = service;
   const [reviews, setReviews] = useState([]);
   useEffect( ()=>{
-    fetch(`https://beauty-parlour-server-moutosi-raka.vercel.app/reviews/${_id}`)
+    fetch(`http://localhost:5000/reviews/${_id}`)
     .then(res => res.json())
     .then(data => {
       setReviews(data)
@@ -16,7 +16,7 @@ const ServiceReview = ({service}) => {
   },[_id])
   
   const handleReview = event =>{
-    // event.preventDefault();
+    event.preventDefault();
     const date = new Date();
     const userId = user?.uid;
     const email = user?.email;
@@ -35,7 +35,7 @@ const ServiceReview = ({service}) => {
         message
     }
 
-    fetch('https://beauty-parlour-server-moutosi-raka.vercel.app/reviews', {
+    fetch('http://localhost:5000/reviews', {
         method: 'POST',
         headers: {
             'content-type' : 'application/json'
@@ -44,10 +44,11 @@ const ServiceReview = ({service}) => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
-        const newReview = [...reviews, data];
+        console.log('respose',data);
+        const newReview = [...reviews, data.review];
         setReviews(newReview)
-        if(data.acknowledged){
+        console.log("new reviwe", newReview)
+        if(data.result.acknowledged){
             alert('review added');
             event.target.reset();
         }
@@ -74,8 +75,8 @@ const ServiceReview = ({service}) => {
             </form>
            {
             reviews.length>0 ?
-             reviews.map(review => <ReviewCart
-            key={review._id}
+             reviews.map((review, index) => <ReviewCart
+            key={index}
             review={review}
             ></ReviewCart>)
             :

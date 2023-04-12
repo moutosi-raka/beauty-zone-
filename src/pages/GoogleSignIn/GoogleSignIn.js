@@ -1,16 +1,44 @@
 import React, { useContext } from 'react';
 import { GoogleAuthProvider} from 'firebase/auth';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const GoogleSignIn = () => {
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     const {googleSignIn} = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const handleGoogleSignIn = ()=>{
         googleSignIn(googleProvider)
         .then(res => {
-            const user = res.user;
-            console.log(user);
+            const user = res.user; 
+            if(user.uid)
+            {
+              const currentUser = {
+                email: user.email
+              }
+                //get jwt token
+       fetch('http://localhost:5000/jwt',
+       {
+        method: 'POST',
+        headers: {
+          'content-type' : 'application/json'
+        },
+        body: JSON.stringify(currentUser)
+       })
+       .then(res => res.json())
+       .then(data => {
+        localStorage.setItem('token', data.token);
+        if(data.token)
+        {
+          navigate(from, {replace: true});
+        }
+        
+       })
+            }
+            
         })
         .catch(e => console.error('error :', e))
     }

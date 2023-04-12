@@ -10,7 +10,7 @@ const MyReview = () => {
   useTitle("My Review");
 
   useEffect(() => {
-    fetch(`https://beauty-parlour-server-moutosi-raka.vercel.app/reviews?email=${user.email}`, {
+    fetch(`http://localhost:5000/reviews?email=${user.email}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -25,7 +25,7 @@ const MyReview = () => {
       "Are you sure, You want to cancel this review"
     );
     if (proceed) {
-      fetch(`https://beauty-parlour-server-moutosi-raka.vercel.app/reviews/${id}`, {
+      fetch(`http://localhost:5000/reviews/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -46,19 +46,6 @@ const MyReview = () => {
     <div className="">
       <div className="text-gray-100">
         <div className="flex flex-col max-w-2xl mx-auto overflow-hidden rounded">
-          {/* {user.photoURL ? (
-            <img
-              src={user.photoURL}
-              alt=""
-              className="w-[50%] border-8 border-white object-cover"
-            />
-          ) : (
-            <img
-              src={userPic}
-              alt=""
-              className="w-full border-8 border-white object-cover"
-            />
-          )} */}
           <img
               src={userPic}
               alt=""
